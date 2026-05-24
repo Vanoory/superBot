@@ -11,7 +11,7 @@ from telegram.ext import ContextTypes
 
 from charts.styles import CHART_THEME_PRESETS
 from models import ChannelRecord, PostDraft
-from utils import parse_hhmm
+from utils import normalize_hhmm
 from .keyboards import (
     channels_keyboard,
     choice_keyboard,
@@ -573,14 +573,14 @@ class BotHandlers:
                 field = custom_state["field"]
                 if raw != "off":
                     try:
-                        parse_hhmm(raw)
+                        raw = normalize_hhmm(raw)
                     except Exception:  # noqa: BLE001
                         self.awaiting_custom_input[update.effective_user.id] = custom_state
                         await update.effective_message.reply_text("Нужен формат `HH:MM`, например `09:30`, или `off`.")
                         return
                 settings = self.settings_repository.get(channel_id)
                 if field == "morning_post_time":
-                    self.settings_repository.update(channel_id, {"morning_post_time": raw if raw != "off" else "off"})
+                    self.settings_repository.update(channel_id, {"morning_post_time": raw})
                 else:
                     filler_times = list(settings.get("filler_post_times", ["14:00", "20:00"]))
                     index = int(field.split("_")[1])
@@ -747,6 +747,8 @@ class BotHandlers:
             )
             return
 
+        if ":" not in payload:
+            return
         action, draft_id = payload.split(":", 1)
         draft = self.pending_repository.get(draft_id)
         if not draft:

@@ -28,12 +28,12 @@ class ApprovalManager:
             await self.bot.send_photo(
                 chat_id=self.admin_chat_id,
                 photo=io.BytesIO(draft.image_bytes),
-                caption=draft.text[:1000],
+                caption=draft.text[:1024],
                 parse_mode=draft.parse_mode,
                 reply_markup=keyboard,
             )
             if len(draft.text) > 1000:
-                await self.bot.send_message(self.admin_chat_id, draft.text[1000:], parse_mode=draft.parse_mode)
+                await self.bot.send_message(self.admin_chat_id, draft.text[1024:], parse_mode=draft.parse_mode)
         else:
             await self.bot.send_message(
                 chat_id=self.admin_chat_id,
@@ -48,11 +48,11 @@ class ApprovalManager:
                 await self.bot.send_photo(
                     chat_id=channel_id,
                     photo=io.BytesIO(draft.image_bytes),
-                    caption=draft.text[:1000],
+                    caption=draft.text[:1024],
                     parse_mode=draft.parse_mode,
                 )
                 if len(draft.text) > 1000:
-                    await self.bot.send_message(channel_id, draft.text[1000:], parse_mode=draft.parse_mode)
+                    await self.bot.send_message(channel_id, draft.text[1024:], parse_mode=draft.parse_mode)
             else:
                 await self.bot.send_message(channel_id, draft.text, parse_mode=draft.parse_mode)
 
