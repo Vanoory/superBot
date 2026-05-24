@@ -6,6 +6,32 @@ from pathlib import Path
 from aiohttp import web
 
 from charts.styles import CHART_THEME_PRESETS, infer_style_mode
+
+
+GALLERY_PRESETS: tuple[str, ...] = (
+    # light
+    "light_classic",
+    "light_pure",
+    "light_paper",
+    "light_minimal",
+    "light_slate",
+    "light_steel",
+    "light_dove",
+    "light_porcelain",
+    # dark
+    "dark_tv",
+    "dark_clean",
+    "dark_graphite",
+    "dark_charcoal",
+    "dark_obsidian",
+    "dark_carbon",
+    "dark_iron",
+    "dark_slate",
+    "dark_shadow",
+    "dark_steel",
+    "dark_smoke",
+    "dark_midnight",
+)
 from models import BosLevel, ChartSpec, HorizontalLine, PointOfInterest, ZoneSpec
 
 
@@ -100,57 +126,66 @@ class WebAppServer:
     def _build_preview_spec(self, preset: str) -> ChartSpec:
         style_mode = infer_style_mode(preset, "B")
         candles = self._sample_candles(seed=preset, count=72)
-        recent = candles[-58:]
-        last = recent[-1]
-        last_price = last["close"]
+        recent = candles[-56:]
+        last_price = recent[-1]["close"]
         highs = [c["high"] for c in recent]
         lows = [c["low"] for c in recent]
-        swing_high = max(highs[-30:-6]) if len(recent) > 30 else max(highs)
-        swing_low = min(lows[-30:-6]) if len(recent) > 30 else min(lows)
-        bull_bias = last_price >= recent[-15]["close"]
+        n = len(recent)
+        recent_window = max(6, n // 4)
+        swing_high = max(highs[-(n // 2): -recent_window]) if n > 20 else max(highs)
+        swing_low = min(lows[-(n // 2): -recent_window]) if n > 20 else min(lows)
+        bull_bias = last_price >= recent[max(0, n - 18)]["close"]
 
         if style_mode == "A":
-            poi_top = last_price * (1.018 if bull_bias else 0.985)
-            poi_bottom = last_price * (1.002 if bull_bias else 0.965)
-            target = swing_high * 1.012 if bull_bias else swing_low * 0.985
-            stop = swing_low * 0.992 if bull_bias else swing_high * 1.012
+            # SMC analysis layout: BOS line, POI/FVG zone, target & stop lines, prediction arrow
+            if bull_bias:
+                fvg_top = last_price * 0.992
+                fvg_bottom = last_price * 0.978
+                target = swing_high * 1.008
+                stop = fvg_bottom * 0.990
+                bos_price = swing_high
+            else:
+                fvg_top = last_price * 1.022
+                fvg_bottom = last_price * 1.008
+                target = swing_low * 0.992
+                stop = fvg_top * 1.010
+                bos_price = swing_low
+
+            zone_x_start = n - 14
+            zone_x_end = n + 6
             zones = [
                 ZoneSpec(
                     kind="demand" if bull_bias else "supply",
-                    x_start=len(recent) - 18,
-                    x_end=len(recent) + 4,
-                    bottom=min(poi_top, poi_bottom),
-                    top=max(poi_top, poi_bottom),
-                    label="POI",
+                    x_start=zone_x_start,
+                    x_end=zone_x_end,
+                    bottom=fvg_bottom,
+                    top=fvg_top,
                 ),
             ]
             bos_levels = [
                 BosLevel(
-                    price=swing_high if bull_bias else swing_low,
-                    bar=max(0, len(recent) - 22),
+                    price=bos_price,
+                    bar=max(0, n - 24),
                     label="BOS",
                 )
             ]
-            poi_box = PointOfInterest(
-                top=max(poi_top, poi_bottom),
-                bottom=min(poi_top, poi_bottom),
-                x_start=len(recent) - 18,
-                x_end=len(recent) + 4,
-                label="POI 4H FVG",
-            )
             horizontal_lines = [
-                HorizontalLine(price=target, color="#4B4F59", label="T1"),
-                HorizontalLine(price=stop, color="#C65966", label="SL"),
+                HorizontalLine(price=target, color="#3A8F5F", style="dashed", label="TP"),
+                HorizontalLine(price=stop, color="#B25460", style="dashed", label="SL"),
             ]
-            prediction = [
-                (3, (poi_top - last_price) * 0.6),
-                (5, (target - last_price) * 0.45),
-                (8, (target - last_price) * 0.95),
-            ] if bull_bias else [
-                (3, (poi_bottom - last_price) * 0.7),
-                (5, (target - last_price) * 0.5),
-                (8, (target - last_price) * 0.95),
-            ]
+            mid_zone = (fvg_top + fvg_bottom) / 2
+            if bull_bias:
+                prediction = [
+                    (2.5, (mid_zone - last_price) * 0.75),
+                    (5.0, (target - last_price) * 0.45),
+                    (8.0, (target - last_price) * 0.95),
+                ]
+            else:
+                prediction = [
+                    (2.5, (mid_zone - last_price) * 0.75),
+                    (5.0, (target - last_price) * 0.5),
+                    (8.0, (target - last_price) * 0.95),
+                ]
             return ChartSpec(
                 style="A",
                 symbol="BTCUSDT",
@@ -161,52 +196,52 @@ class WebAppServer:
                 bos_levels=bos_levels,
                 horizontal_lines=horizontal_lines,
                 prediction_path=prediction,
-                poi_box=poi_box,
+                poi_box=None,
                 watermark_tv=False,
                 watermark_smart=False,
                 header_exchange="Binance",
             )
 
-        # style B (dark) — signal-style preview
-        entry_top = last_price * (1.012 if not bull_bias else 0.992)
-        entry_bottom = last_price * (1.032 if not bull_bias else 0.972)
+        # style B (dark) — clean signal layout: entry zone + targets + stop + projection
         if bull_bias:
-            entry_top, entry_bottom = max(entry_top, entry_bottom), min(entry_top, entry_bottom)
-            target_1 = swing_high * 1.005
-            target_2 = swing_high * 1.025
-            stop = entry_bottom * 0.985
+            entry_top = last_price * 0.998
+            entry_bottom = last_price * 0.984
+            target_1 = swing_high * 1.004
+            target_2 = swing_high * 1.020
+            stop = entry_bottom * 0.988
         else:
-            entry_top, entry_bottom = max(entry_top, entry_bottom), min(entry_top, entry_bottom)
-            target_1 = swing_low * 0.985
-            target_2 = swing_low * 0.965
-            stop = entry_top * 1.015
+            entry_top = last_price * 1.016
+            entry_bottom = last_price * 1.002
+            target_1 = swing_low * 0.996
+            target_2 = swing_low * 0.980
+            stop = entry_top * 1.012
 
         zones = [
             ZoneSpec(
                 kind="demand" if bull_bias else "supply",
-                x_start=len(recent) - 16,
-                x_end=len(recent) + 6,
+                x_start=n - 12,
+                x_end=n + 8,
                 bottom=entry_bottom,
                 top=entry_top,
-                label="Entry",
             )
         ]
         horizontal_lines = [
-            HorizontalLine(price=target_1, color="#5FD35F", label="T1"),
-            HorizontalLine(price=target_2, color="#5FD35F", label="T2"),
-            HorizontalLine(price=stop, color="#F45B69", label="SL"),
+            HorizontalLine(price=target_1, color="#4FBF7A", style="solid", label="TP1"),
+            HorizontalLine(price=target_2, color="#4FBF7A", style="solid", label="TP2"),
+            HorizontalLine(price=stop, color="#E5677A", style="solid", label="SL"),
         ]
+        mid_entry = (entry_top + entry_bottom) / 2
         if bull_bias:
             prediction = [
-                (3, (entry_top - last_price) * 0.5),
-                (5, (target_1 - last_price) * 0.55),
-                (9, (target_2 - last_price) * 0.95),
+                (2.5, (mid_entry - last_price) * 0.6),
+                (5.0, (target_1 - last_price) * 0.55),
+                (9.0, (target_2 - last_price) * 0.95),
             ]
         else:
             prediction = [
-                (3, (entry_top - last_price) * 0.5),
-                (5, (target_1 - last_price) * 0.45),
-                (9, (target_2 - last_price) * 0.95),
+                (2.5, (mid_entry - last_price) * 0.6),
+                (5.0, (target_1 - last_price) * 0.5),
+                (9.0, (target_2 - last_price) * 0.95),
             ]
         return ChartSpec(
             style="B",
@@ -217,8 +252,8 @@ class WebAppServer:
             zones=zones,
             horizontal_lines=horizontal_lines,
             prediction_path=prediction,
-            watermark_tv=True,
-            watermark_smart=True,
+            watermark_tv=False,
+            watermark_smart=False,
             header_exchange="Bybit",
         )
 
@@ -283,50 +318,33 @@ class WebAppServer:
 
     def _preset_name_ru(self, preset: str) -> str:
         names = {
-            "light_classic": "Классический светлый",
-            "light_minimal": "Минималистичный",
-            "light_blueprint": "Чертеж",
+            # light
+            "light_classic": "Классический",
+            "light_pure": "Чистый белый",
             "light_paper": "Бумага",
-            "light_terminal": "Терминал",
-            "light_pastel": "Пастельный",
-            "light_sky": "Небесный",
-            "light_sand": "Песочный",
-            "light_lavender": "Лаванда",
-            "light_mint": "Мятный",
-            "light_coral": "Коралловый",
-            "light_spring": "Весенний",
-            "light_rose": "Розовый",
-            "light_slate": "Сланцевый",
+            "light_minimal": "Минимал",
+            "light_slate": "Сланец",
+            "light_steel": "Стальной",
+            "light_dove": "Голубиный",
+            "light_porcelain": "Фарфор",
+            # dark
             "dark_tv": "TradingView",
             "dark_clean": "Чистый тёмный",
-            "dark_neon": "Неоновый",
-            "dark_gold": "Золотой",
-            "dark_crimson": "Багровый",
-            "dark_ocean": "Океан",
-            "dark_matrix": "Матрица",
-            "dark_amber": "Янтарный",
-            "dark_plasma": "Плазма",
-            "dark_cyber": "Киберпанк",
-            "dark_steel": "Стальной",
             "dark_graphite": "Графит",
-            "dark_blood": "Кровавый",
-            "dark_royal": "Королевский",
-            "dark_emerald": "Изумруд",
+            "dark_charcoal": "Уголь",
             "dark_obsidian": "Обсидиан",
-            "dark_rust": "Ржавый",
-            "dark_arctic": "Арктика",
-            "dark_lava": "Лава",
-            "dark_purple": "Пурпурный",
-            "dark_marine": "Морской",
-            "dark_copper": "Медный",
+            "dark_carbon": "Карбон",
+            "dark_iron": "Железо",
+            "dark_slate": "Сланец",
             "dark_shadow": "Тень",
-            "dark_candy": "Конфетный",
-            "dark_azure": "Лазурный",
-            "dark_mocha": "Мокко",
-            "dark_mint": "Тёмно-мятный",
-            "dark_oil": "Нефть",
+            "dark_steel": "Сталь",
+            "dark_smoke": "Дым",
+            "dark_midnight": "Полночь",
         }
-        return names.get(preset, preset)
+        if preset in names:
+            return names[preset]
+        # fallback for legacy aliases
+        return preset.replace("_", " ").title()
 
     async def style_gallery(self, request: web.Request) -> web.Response:
         channel_id = request.match_info["channel_id"]
@@ -339,7 +357,8 @@ class WebAppServer:
             return "light" if CHART_THEME_PRESETS[preset].get("style_mode") == "A" else "dark"
 
         cards = []
-        for preset in sorted(CHART_THEME_PRESETS, key=lambda key: (_group(key), key)):
+        visible_presets = [p for p in GALLERY_PRESETS if p in CHART_THEME_PRESETS]
+        for preset in sorted(visible_presets, key=lambda key: (_group(key), key)):
             is_signal = preset == current_signal
             is_smc = preset == current_smc
             is_morning = preset == current_morning
