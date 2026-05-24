@@ -41,9 +41,11 @@ class ChartGenerator:
 
         if spec.style == "B":
             self._draw_background(ax, spec, len(candles), price_min - padding, price_max + padding, theme)
-            ax.grid(False)
+            ax.grid(True, color=theme["grid_color"], linewidth=0.4, alpha=0.4, linestyle="-")
+            ax.set_axisbelow(True)
         else:
-            ax.grid(True, color=theme["grid_color"], linewidth=0.7, alpha=0.6, linestyle="-")
+            ax.grid(True, color=theme["grid_color"], linewidth=0.5, alpha=0.45, linestyle="-")
+            ax.set_axisbelow(True)
 
         for zone in spec.zones:
             self._draw_zone(ax, zone, theme)
@@ -51,44 +53,57 @@ class ChartGenerator:
         self._draw_candles(ax, candles, theme, spec.style)
 
         for bos in spec.bos_levels:
+            bos_color = theme.get("bos_color", theme["line_color"])
             ax.hlines(
                 bos.price,
                 xmin=bos.bar,
-                xmax=len(candles) + 10,
-                colors=theme.get("bos_color", theme["line_color"]),
-                linestyles="dashed",
-                linewidth=1.2,
+                xmax=len(candles) + 8,
+                colors=bos_color,
+                linestyles=(0, (4, 3)),
+                linewidth=1.0,
                 zorder=4,
+                alpha=0.85,
             )
             ax.text(
-                bos.bar + 0.6,
+                bos.bar + 0.4,
                 bos.price,
-                bos.label,
-                fontsize=9,
-                color=theme.get("bos_color", theme["line_color"]),
+                f" {bos.label} ",
+                fontsize=8,
+                color=bos_color,
                 va="bottom",
+                ha="left",
+                fontweight="600",
+                alpha=0.95,
             )
 
         for line in spec.horizontal_lines:
             self._draw_horizontal_line(ax, line, len(candles))
 
         if spec.poi_box:
+            poi_face = theme.get("poi_fill", "#9097A8" if spec.style == "A" else "#7B7B7B")
+            poi_edge = theme.get("poi_border", theme.get("line_color", "#3E4350"))
             rect = Rectangle(
                 (spec.poi_box.x_start, spec.poi_box.bottom),
                 spec.poi_box.x_end - spec.poi_box.x_start,
                 spec.poi_box.top - spec.poi_box.bottom,
-                facecolor="#9097A8" if spec.style == "A" else "#7B7B7B",
-                alpha=0.15 if spec.style == "A" else 0.18,
-                edgecolor="none",
+                facecolor=poi_face,
+                alpha=0.12 if spec.style == "A" else 0.16,
+                edgecolor=poi_edge,
+                linewidth=0.6,
+                linestyle=(0, (3, 3)),
                 zorder=1,
             )
             ax.add_patch(rect)
             ax.text(
-                spec.poi_box.x_end + 0.3,
-                (spec.poi_box.top + spec.poi_box.bottom) / 2,
+                spec.poi_box.x_end - 0.4,
+                spec.poi_box.top + (spec.poi_box.top - spec.poi_box.bottom) * 0.08,
                 spec.poi_box.label,
-                fontsize=9,
-                color=theme.get("line_color", "#3E4350"),
+                fontsize=8,
+                color=poi_edge,
+                ha="right",
+                va="bottom",
+                fontweight="600",
+                alpha=0.9,
             )
 
         if spec.prediction_path:
@@ -167,7 +182,8 @@ class ChartGenerator:
         return sorted(candidates)[index]
 
     def _draw_candles(self, ax, candles: list[dict[str, float]], theme: dict, style_name: str) -> None:
-        width = 0.68 if style_name == "A" else 0.55
+        width = 0.7 if style_name == "A" else 0.62
+        wick_lw = 0.9 if style_name == "A" else 0.8
         for index, candle in enumerate(candles):
             open_ = candle["open"]
             close = candle["close"]
@@ -177,38 +193,51 @@ class ChartGenerator:
             face = theme["bull_face"] if bull else theme["bear_face"]
             edge = theme["bull_edge"] if bull else theme["bear_edge"]
             body_bottom = min(open_, close)
-            body_height = max(abs(close - open_), 0.0001)
-            ax.vlines(index, low, high, colors=theme["wick_color"], linewidth=0.7, zorder=3)
+            body_height = max(abs(close - open_), (high - low) * 0.01, 0.0001)
+            ax.vlines(index, low, high, colors=theme["wick_color"], linewidth=wick_lw, zorder=3)
             rect = Rectangle(
                 (index - width / 2, body_bottom),
                 width,
                 body_height,
                 facecolor=face,
                 edgecolor=edge,
-                linewidth=0.9,
+                linewidth=0.8,
                 zorder=4,
             )
             ax.add_patch(rect)
 
     def _draw_zone(self, ax, zone: ZoneSpec, theme: dict) -> None:
         fill = zone.fill_color or (theme["zone_demand"] if zone.kind == "demand" else theme["zone_supply"])
+        default_border = theme.get(
+            "zone_border_demand" if zone.kind == "demand" else "zone_border_supply"
+        )
+        border = zone.border_color or default_border
         rect = Rectangle(
             (zone.x_start, zone.bottom),
             zone.x_end - zone.x_start,
             zone.top - zone.bottom,
             facecolor=fill,
-            edgecolor=zone.border_color or "none",
+            edgecolor=border or "none",
             alpha=zone.alpha or theme["zone_alpha"],
-            linewidth=1.0 if zone.border_color else 0.0,
+            linewidth=0.8 if border else 0.0,
             zorder=1,
         )
         ax.add_patch(rect)
 
     def _draw_horizontal_line(self, ax, line: HorizontalLine, candle_count: int) -> None:
-        linestyle = "--" if line.style == "dashed" else "-"
-        ax.hlines(line.price, xmin=0, xmax=candle_count + 10, colors=line.color, linestyles=linestyle, linewidth=1.0, zorder=2)
+        linestyle = (0, (4, 3)) if line.style == "dashed" else "-"
+        ax.hlines(
+            line.price,
+            xmin=0,
+            xmax=candle_count + 8,
+            colors=line.color,
+            linestyles=linestyle,
+            linewidth=0.9,
+            zorder=2,
+            alpha=0.9,
+        )
         if line.label:
-            text = line.label if not line.label.startswith("T") else format_price(line.price)
+            text = format_price(line.price) if line.label.startswith("T") else line.label
             self._draw_price_label(ax, candle_count + 1, line.price, text, line.color, "#FFFFFF")
 
     def _draw_prediction(self, ax, candles: list[dict[str, float]], offsets: list[tuple[float, float]], theme: dict, style_name: str) -> None:
@@ -223,18 +252,28 @@ class ChartGenerator:
             x_points.append(current_x)
             y_points.append(current_y)
         ax.plot(
-            x_points,
-            y_points,
+            x_points[:-1],
+            y_points[:-1],
             color=color,
-            linewidth=1.4,
-            linestyle=":" if style_name == "A" else "-",
+            linewidth=1.6 if style_name == "B" else 1.4,
+            linestyle=(0, (2, 3)) if style_name == "A" else "-",
             zorder=5,
+            solid_capstyle="round",
+            alpha=0.95,
         )
         ax.annotate(
             "",
             xy=(x_points[-1], y_points[-1]),
             xytext=(x_points[-2], y_points[-2]),
-            arrowprops=dict(arrowstyle="->", color=color, lw=1.4),
+            arrowprops=dict(
+                arrowstyle="-|>",
+                color=color,
+                lw=1.6 if style_name == "B" else 1.4,
+                mutation_scale=12,
+                shrinkA=0,
+                shrinkB=0,
+            ),
+            zorder=6,
         )
 
     def _draw_price_label(self, ax, x: float, y: float, text: str, bg: str, fg: str) -> None:
@@ -242,32 +281,46 @@ class ChartGenerator:
             x,
             y,
             f" {text} ",
-            fontsize=10,
+            fontsize=9,
             color=fg,
             va="center",
             ha="left",
-            bbox={"boxstyle": "round,pad=0.18", "facecolor": bg, "edgecolor": "none"},
-            zorder=6,
+            fontweight="600",
+            bbox={"boxstyle": "round,pad=0.22", "facecolor": bg, "edgecolor": "none"},
+            zorder=7,
         )
 
     def _draw_header_and_watermarks(self, ax, spec: ChartSpec, theme: dict) -> None:
+        header_color = theme.get("header_color", "#EFEFEF" if spec.style == "B" else "#2B2F39")
         if spec.style == "B":
             last = spec.candles[-1]
+            change = last["close"] - spec.candles[0]["close"]
+            change_pct = (change / spec.candles[0]["close"]) * 100 if spec.candles[0]["close"] else 0
             header = (
-                f"{spec.symbol} Perpetual Contract · {spec.interval} · {spec.header_exchange}   "
-                f"ОТКР{format_price(last['open'])} МАКС{format_price(last['high'])} "
-                f"МИН{format_price(last['low'])} ЗАКР{format_price(last['close'])}"
+                f"{spec.symbol}  ·  {spec.interval}  ·  {spec.header_exchange}     "
+                f"O {format_price(last['open'])}   H {format_price(last['high'])}   "
+                f"L {format_price(last['low'])}   C {format_price(last['close'])}   "
+                f"{change_pct:+.2f}%"
             )
-            ax.set_title(header, color=theme.get("header_color", "#EFEFEF"), fontsize=12, loc="left", pad=10)
+            ax.set_title(header, color=header_color, fontsize=10, loc="left", pad=8, fontweight="500")
             if spec.watermark_tv:
-                ax.text(0.01, 0.03, "TradingView", transform=ax.transAxes, fontsize=22, color="#FFFFFF", alpha=0.9, fontweight="bold")
+                ax.text(
+                    0.01, 0.04, "TradingView",
+                    transform=ax.transAxes, fontsize=14, color=header_color,
+                    alpha=0.35, fontweight="600",
+                )
             if spec.watermark_smart:
-                ax.text(0.985, 0.03, "SMART", transform=ax.transAxes, fontsize=24, color="#FFFFFF", alpha=0.95, ha="right", fontweight="bold")
+                ax.text(
+                    0.99, 0.04, "SMART",
+                    transform=ax.transAxes, fontsize=16, color=header_color,
+                    alpha=0.4, ha="right", fontweight="700",
+                )
         else:
             ax.set_title(
-                f"{spec.symbol} / TetherUS · {spec.interval} · Binance",
-                color=theme.get("header_color", "#2B2F39"),
-                fontsize=12,
+                f"{spec.symbol}  ·  {spec.interval}  ·  Binance",
+                color=header_color,
+                fontsize=10,
                 loc="left",
-                pad=10,
+                pad=8,
+                fontweight="500",
             )

@@ -192,6 +192,18 @@ class SignalLedgerRepository:
 
         self.store.update(mutator)
 
+    def mark_published(self, channel_id: str, for_date: date | None = None) -> None:
+        day_key = self._today_key(for_date)
+
+        def mutator(payload: dict[str, Any]) -> dict[str, Any]:
+            payload.setdefault(day_key, {})
+            payload[day_key].setdefault(channel_id, {"reserved": 0, "published": 0})
+            payload[day_key][channel_id]["published"] += 1
+            payload[day_key][channel_id]["reserved"] = max(0, payload[day_key][channel_id]["reserved"] - 1)
+            return payload
+
+        self.store.update(mutator)
+
 
 class ScheduleStateRepository:
     def __init__(self, root: Path):
@@ -205,29 +217,6 @@ class ScheduleStateRepository:
         def mutator(payload: dict[str, Any]) -> dict[str, Any]:
             payload.setdefault(channel_id, {})
             payload[channel_id][slot_key] = today_key
-            return payload
-
-        self.store.update(mutator)
-
-    def release(self, channel_id: str, for_date: date | None = None) -> None:
-        day_key = self._today_key(for_date)
-
-        def mutator(payload: dict[str, Any]) -> dict[str, Any]:
-            payload.setdefault(day_key, {})
-            payload[day_key].setdefault(channel_id, {"reserved": 0, "published": 0})
-            payload[day_key][channel_id]["reserved"] = max(0, payload[day_key][channel_id]["reserved"] - 1)
-            return payload
-
-        self.store.update(mutator)
-
-    def mark_published(self, channel_id: str, for_date: date | None = None) -> None:
-        day_key = self._today_key(for_date)
-
-        def mutator(payload: dict[str, Any]) -> dict[str, Any]:
-            payload.setdefault(day_key, {})
-            payload[day_key].setdefault(channel_id, {"reserved": 0, "published": 0})
-            payload[day_key][channel_id]["published"] += 1
-            payload[day_key][channel_id]["reserved"] = max(0, payload[day_key][channel_id]["reserved"] - 1)
             return payload
 
         self.store.update(mutator)

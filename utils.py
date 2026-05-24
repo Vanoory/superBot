@@ -8,7 +8,16 @@ from typing import Iterable
 
 def parse_hhmm(value: str) -> tuple[int, int]:
     hour_str, minute_str = value.split(":", 1)
-    return int(hour_str), int(minute_str)
+    hour = int(hour_str)
+    minute = int(minute_str)
+    if not (0 <= hour <= 23 and 0 <= minute <= 59):
+        raise ValueError(f"Invalid time value: {value}")
+    return hour, minute
+
+
+def normalize_hhmm(value: str) -> str:
+    hour, minute = parse_hhmm(value)
+    return f"{hour:02d}:{minute:02d}"
 
 
 def html_escape(text: str) -> str:
