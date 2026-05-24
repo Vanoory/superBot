@@ -1,0 +1,1127 @@
+2026-05-24 15:34:16,600 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:34:16,608 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:34:16,612 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:34:16,613 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:34:16,614 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:34:16,852 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 15:34:16,896 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 15:34:17,008 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 15:34:17,010 INFO apscheduler.scheduler Added job "BotHandlers.generate_morning_for_active_channels" to job store "default"
+2026-05-24 15:34:17,010 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 15:34:17,010 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 15:34:17,011 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 15:34:17,011 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 15:34:17,011 INFO apscheduler.scheduler Scheduler started
+2026-05-24 15:34:17,012 INFO bot.application Scheduler started
+2026-05-24 15:34:17,012 INFO apscheduler.scheduler Scheduler started
+2026-05-24 15:34:17,013 INFO telegram.ext.Application Application started
+2026-05-24 15:34:17,055 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 15:34:25,839 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:34:25,997 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:34:35,898 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:34:45,942 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:34:55,995 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:06,062 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:12,551 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:12,701 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getChat "HTTP/1.1 400 Bad Request"
+2026-05-24 15:35:12,708 ERROR telegram.ext.Application No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\handlers.py", line 104, in add_channel
+    chat = await context.bot.get_chat(channel_ref)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 899, in get_chat
+    result = await super().get_chat(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 4850, in get_chat
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2026-05-24 15:35:22,600 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:32,643 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:42,687 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:48,284 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:35:48,416 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getChat "HTTP/1.1 400 Bad Request"
+2026-05-24 15:35:48,417 ERROR telegram.ext.Application No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\handlers.py", line 104, in add_channel
+    chat = await context.bot.get_chat(channel_ref)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 899, in get_chat
+    result = await super().get_chat(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 4850, in get_chat
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2026-05-24 15:35:58,331 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:08,375 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:18,419 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:28,463 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:38,591 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:41,173 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:36:51,222 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:37:01,271 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:37:04,672 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 15:37:04,813 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:37:04,814 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 15:37:04,815 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 15:37:04,839 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 15:40:53,881 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:40:53,883 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:40:53,884 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:40:53,885 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:40:53,887 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 15:40:54,061 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 15:40:54,109 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 15:40:54,187 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 15:40:54,192 INFO apscheduler.scheduler Added job "BotHandlers.generate_morning_for_active_channels" to job store "default"
+2026-05-24 15:40:54,197 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 15:40:54,201 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 15:40:54,222 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 15:40:54,223 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 15:40:54,223 INFO apscheduler.scheduler Scheduler started
+2026-05-24 15:40:54,224 INFO bot.application Scheduler started
+2026-05-24 15:40:54,225 INFO apscheduler.scheduler Scheduler started
+2026-05-24 15:40:54,225 INFO telegram.ext.Application Application started
+2026-05-24 15:40:54,270 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 15:40:58,304 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:40:58,430 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getChat "HTTP/1.1 200 OK"
+2026-05-24 15:40:58,480 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getChatMember "HTTP/1.1 200 OK"
+2026-05-24 15:40:58,556 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:41:03,672 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:03,856 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:41:10,574 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:10,710 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 15:41:10,775 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/editMessageReplyMarkup "HTTP/1.1 200 OK"
+2026-05-24 15:41:13,462 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:13,520 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 15:41:13,598 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/editMessageReplyMarkup "HTTP/1.1 200 OK"
+2026-05-24 15:41:23,089 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:23,241 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:41:33,142 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:39,829 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:49,910 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:41:59,958 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:07,287 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 15:42:07,365 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:42:10,002 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:20,049 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:30,091 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:35,628 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:35,762 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 15:42:35,910 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 15:42:35,995 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:42:45,673 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:48,117 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:42:50,773 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 15:42:50,854 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:42:58,162 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:08,206 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:18,249 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:28,291 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:38,334 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:48,396 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:58,438 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:58,897 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:43:59,066 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:44:01,545 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:01,642 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:44:10,940 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:11,090 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:44:20,602 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:20,765 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:44:26,217 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:26,357 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 15:44:26,427 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/editMessageReplyMarkup "HTTP/1.1 200 OK"
+2026-05-24 15:44:35,710 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:45,766 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:44:55,808 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:04,039 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 15:45:04,151 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:45:05,851 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:15,905 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:23,037 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:23,200 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 15:45:23,281 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:45:33,082 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:38,134 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:38,291 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 15:45:48,179 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:45:58,221 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:08,264 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:18,307 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:28,350 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:38,395 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:48,443 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:46:58,487 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:08,531 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:18,574 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:28,618 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:38,660 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:48,703 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:47:58,747 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:08,793 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:18,838 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:28,881 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:38,925 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:48,967 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:48:59,018 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:09,067 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:19,108 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:29,149 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:39,193 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:49,244 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:49:59,289 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:09,341 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:19,387 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:29,428 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:39,471 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:49,515 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:50:59,566 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:09,613 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:19,655 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:29,696 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:39,740 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:49,781 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:51:59,825 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:52:09,873 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:52:19,916 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:52:29,960 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:52:40,005 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:52:50,049 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:00,092 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:10,193 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:20,236 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:30,285 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:40,327 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:53:50,370 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:00,431 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:10,473 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:20,516 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:30,560 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:40,602 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:54:50,643 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:00,692 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:10,735 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:20,776 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:30,822 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:40,868 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:55:50,916 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:00,965 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:11,011 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:21,055 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:31,100 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:41,144 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:56:51,191 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:01,232 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:11,282 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:21,325 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:31,370 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:41,411 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:57:51,455 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:01,499 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:11,547 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:21,595 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:31,643 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:41,690 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:58:51,736 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:01,781 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:11,825 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:21,869 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:31,911 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:41,953 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 15:59:51,999 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:02,041 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:12,085 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:22,126 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:32,168 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:42,215 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:00:52,258 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:02,302 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:12,346 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:22,392 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:32,438 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:42,488 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:01:52,530 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:02,581 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:12,625 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:22,675 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:32,718 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:42,760 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:02:52,807 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:02,855 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:12,900 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:22,949 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:33,012 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:43,063 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:03:53,113 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:03,162 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:13,217 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:19,097 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:04:19,223 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:19,224 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 16:04:19,224 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:04:19,236 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 16:04:28,749 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:04:28,751 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:04:28,751 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:04:28,752 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:04:28,753 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:04:28,907 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:04:28,950 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:04:29,020 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 16:04:29,021 INFO apscheduler.scheduler Added job "BotHandlers.generate_morning_for_active_channels" to job store "default"
+2026-05-24 16:04:29,022 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 16:04:29,022 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 16:04:29,023 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 16:04:29,023 INFO apscheduler.scheduler Added job "BotHandlers.generate_random_filler_for_active_channels" to job store "default"
+2026-05-24 16:04:29,023 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:04:29,024 INFO bot.application Scheduler started
+2026-05-24 16:04:29,024 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:04:29,024 INFO telegram.ext.Application Application started
+2026-05-24 16:04:29,067 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 16:04:39,204 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:42,542 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:42,710 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:04:52,600 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:54,264 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:04:54,456 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:05:04,315 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:05:14,365 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:05:24,410 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:05:34,472 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:05:44,519 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:05:54,564 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:04,615 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:14,664 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:24,707 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:34,765 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:44,825 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:06:54,881 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:04,941 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:14,986 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:25,037 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:35,086 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:35,830 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:35,987 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:07:45,884 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:48,119 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:07:48,322 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:07:58,165 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:08,219 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:15,136 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:25,233 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:35,281 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:42,656 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 16:08:42,727 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:08:45,331 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:08:55,380 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:05,424 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:12,192 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:12,348 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:09:12,487 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:09:17,255 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:17,327 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:09:27,317 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:37,367 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:47,416 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:48,321 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:09:48,502 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:09:58,365 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:04,842 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:05,124 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:10:13,276 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:13,546 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:10:15,994 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:16,048 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:10:16,138 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/editMessageReplyMarkup "HTTP/1.1 200 OK"
+2026-05-24 16:10:23,167 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:33,227 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:43,277 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:53,324 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:10:53,832 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendPhoto "HTTP/1.1 200 OK"
+2026-05-24 16:10:53,898 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:11:03,373 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:11:13,427 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:11:23,480 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:11:33,525 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:11:43,575 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:11:53,624 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:03,678 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:13,727 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:23,775 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:33,822 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:43,870 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:12:53,925 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:03,983 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:14,033 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:24,086 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:34,151 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:44,197 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:13:54,294 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:04,342 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:14,392 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:24,465 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:34,525 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:44,570 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:14:54,623 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:04,672 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:14,719 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:24,763 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:34,809 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:44,857 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:15:54,909 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:04,958 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:15,001 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:25,044 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:35,093 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:45,141 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:16:55,201 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:05,244 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:15,300 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:25,354 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:35,406 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:45,454 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:17:55,503 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:05,547 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:15,595 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:25,643 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:35,690 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:45,737 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:18:55,783 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:05,826 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:15,878 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:25,923 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:35,968 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:46,053 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:19:56,125 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:06,169 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:16,215 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:26,260 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:36,317 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:46,368 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:20:56,416 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:06,467 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:16,512 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:26,567 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:36,620 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:46,666 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:21:56,721 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:06,766 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:16,817 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:26,868 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:36,918 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:46,974 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:22:57,030 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:07,078 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:17,125 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:27,169 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:37,217 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:47,267 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:23:57,317 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:07,365 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:17,413 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:27,462 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:37,510 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:47,554 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:24:57,609 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:07,656 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:17,700 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:27,753 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:37,802 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:47,850 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:25:57,905 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:07,952 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:17,998 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:28,061 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:38,109 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:48,156 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:26:58,206 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:08,251 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:18,304 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:28,357 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:38,403 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:48,462 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:27:58,509 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:08,555 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:18,605 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:28,659 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:38,706 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:48,754 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:28:58,801 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:08,849 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:18,899 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:28,946 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:38,991 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:49,043 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:29:59,089 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:09,134 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:19,180 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:29,233 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:39,281 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:49,335 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:30:59,385 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:04,663 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:31:04,791 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:04,791 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 16:31:04,792 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:31:04,810 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 16:31:19,083 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:31:19,084 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:31:19,085 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:31:19,262 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:31:19,304 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:31:19,355 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 16:31:19,356 INFO apscheduler.scheduler Added job "BotHandlers.run_schedule_tick" to job store "default"
+2026-05-24 16:31:19,356 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 16:31:19,357 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 16:31:19,357 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:31:19,357 INFO bot.application Scheduler started
+2026-05-24 16:31:19,358 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:31:19,359 INFO telegram.ext.Application Application started
+2026-05-24 16:31:19,401 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 16:31:22,762 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:22,833 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:31:31,456 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:31,669 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:31:37,481 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:37,620 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:31:37,687 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:31:47,526 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:31:57,569 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:07,611 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:17,655 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:19,095 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:33:19 EEST)" (scheduled at 2026-05-24 16:32:19.083463+03:00)
+2026-05-24 16:32:19,126 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:33:19 EEST)" executed successfully
+2026-05-24 16:32:24,379 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:24,525 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:24,605 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:28,623 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:28,690 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:28,755 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:32,534 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:32,601 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:32,676 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:34,964 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:35,029 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:35,206 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:37,095 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:37,238 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:37,337 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:42,109 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:42,162 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:42,232 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:45,414 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:32:45,469 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:32:45,542 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:32:55,458 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:05,501 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:15,545 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:19,093 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:34:19 EEST)" (scheduled at 2026-05-24 16:33:19.083463+03:00)
+2026-05-24 16:33:19,094 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:34:19 EEST)" executed successfully
+2026-05-24 16:33:25,590 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:27,208 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:27,362 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:33:29,148 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:29,199 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 16:33:29,267 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:33:38,513 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:38,666 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:33:48,558 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:33:58,600 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:08,647 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:18,692 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:19,096 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:35:19 EEST)" (scheduled at 2026-05-24 16:34:19.083463+03:00)
+2026-05-24 16:34:19,097 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:35:19 EEST)" executed successfully
+2026-05-24 16:34:28,758 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:36,788 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:34:36,922 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:36,923 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 16:34:36,923 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:34:36,940 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 16:34:48,757 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:34:48,758 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:34:48,758 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 16:34:48,923 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:34:48,965 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 16:34:49,016 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 16:34:49,018 INFO apscheduler.scheduler Added job "BotHandlers.run_schedule_tick" to job store "default"
+2026-05-24 16:34:49,018 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 16:34:49,019 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 16:34:49,019 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:34:49,019 INFO bot.application Scheduler started
+2026-05-24 16:34:49,020 INFO apscheduler.scheduler Scheduler started
+2026-05-24 16:34:49,020 INFO telegram.ext.Application Application started
+2026-05-24 16:34:49,062 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 16:34:50,716 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:50,759 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 400 Bad Request"
+2026-05-24 16:34:50,760 ERROR bot.handlers Unhandled bot error
+Traceback (most recent call last):
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\handlers.py", line 390, in chart_style
+    await update.effective_message.reply_text(
+    ...<2 lines>...
+    )
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_message.py", line 1794, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Inline keyboard button web app url '/https://yessirbro.com/style-gallery/-1003733603815' is invalid: url host is empty
+2026-05-24 16:34:50,867 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:34:55,462 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:34:55,505 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 400 Bad Request"
+2026-05-24 16:34:55,506 ERROR bot.handlers Unhandled bot error
+Traceback (most recent call last):
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\handlers.py", line 390, in chart_style
+    await update.effective_message.reply_text(
+    ...<2 lines>...
+    )
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_message.py", line 1794, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<19 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Inline keyboard button web app url '/https://yessirbro.com/style-gallery/-1003733603815' is invalid: url host is empty
+2026-05-24 16:34:55,571 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 16:35:05,506 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:35:15,548 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:35:25,591 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:35:35,636 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:35:45,678 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:35:48,769 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:36:48 EEST)" (scheduled at 2026-05-24 16:35:48.757682+03:00)
+2026-05-24 16:35:48,774 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:36:48 EEST)" executed successfully
+2026-05-24 16:35:55,719 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:05,762 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:15,803 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:25,846 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:35,889 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:45,933 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:36:48,772 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:37:48 EEST)" (scheduled at 2026-05-24 16:36:48.757682+03:00)
+2026-05-24 16:36:48,773 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:37:48 EEST)" executed successfully
+2026-05-24 16:36:55,977 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:06,022 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:16,064 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:26,107 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:36,150 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:46,194 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:37:48,766 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:38:48 EEST)" (scheduled at 2026-05-24 16:37:48.757682+03:00)
+2026-05-24 16:37:48,767 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:38:48 EEST)" executed successfully
+2026-05-24 16:37:56,237 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:06,279 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:16,321 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:26,363 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:36,404 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:46,447 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:38:48,772 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:39:48 EEST)" (scheduled at 2026-05-24 16:38:48.757682+03:00)
+2026-05-24 16:38:48,773 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:39:48 EEST)" executed successfully
+2026-05-24 16:38:56,491 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:06,535 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:16,577 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:26,620 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:36,662 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:46,705 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:39:48,759 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:40:48 EEST)" (scheduled at 2026-05-24 16:39:48.757682+03:00)
+2026-05-24 16:39:48,760 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:40:48 EEST)" executed successfully
+2026-05-24 16:39:56,747 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:06,790 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:16,832 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:26,875 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:36,919 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:46,962 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:40:48,770 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:41:48 EEST)" (scheduled at 2026-05-24 16:40:48.757682+03:00)
+2026-05-24 16:40:48,771 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:41:48 EEST)" executed successfully
+2026-05-24 16:40:57,007 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:07,049 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:17,092 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:27,135 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:37,178 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:47,221 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:41:48,772 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:42:48 EEST)" (scheduled at 2026-05-24 16:41:48.757682+03:00)
+2026-05-24 16:41:48,774 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:42:48 EEST)" executed successfully
+2026-05-24 16:41:57,263 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:07,306 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:17,348 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:27,390 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:37,433 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:47,475 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:42:48,772 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:43:48 EEST)" (scheduled at 2026-05-24 16:42:48.757682+03:00)
+2026-05-24 16:42:48,773 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:43:48 EEST)" executed successfully
+2026-05-24 16:42:57,517 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:07,559 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:17,601 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:27,647 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:37,688 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:47,733 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:43:48,759 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:44:48 EEST)" (scheduled at 2026-05-24 16:43:48.757682+03:00)
+2026-05-24 16:43:48,760 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:44:48 EEST)" executed successfully
+2026-05-24 16:43:57,775 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:07,818 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:17,860 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:27,907 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:37,955 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:48,065 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:44:48,758 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:45:48 EEST)" (scheduled at 2026-05-24 16:44:48.757682+03:00)
+2026-05-24 16:44:48,764 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:45:48 EEST)" executed successfully
+2026-05-24 16:44:58,111 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:08,154 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:18,196 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:28,242 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:38,287 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:48,332 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:45:48,767 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:46:48 EEST)" (scheduled at 2026-05-24 16:45:48.757682+03:00)
+2026-05-24 16:45:48,768 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:46:48 EEST)" executed successfully
+2026-05-24 16:45:58,376 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:08,422 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:18,466 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:28,513 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:38,556 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:48,602 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:46:48,760 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:47:48 EEST)" (scheduled at 2026-05-24 16:46:48.757682+03:00)
+2026-05-24 16:46:48,762 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:47:48 EEST)" executed successfully
+2026-05-24 16:46:58,645 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:08,687 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:18,733 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:28,777 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:38,822 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:48,770 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:48:48 EEST)" (scheduled at 2026-05-24 16:47:48.757682+03:00)
+2026-05-24 16:47:48,771 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:48:48 EEST)" executed successfully
+2026-05-24 16:47:48,864 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:47:58,906 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:08,948 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:18,990 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:29,035 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:39,079 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:48,774 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:49:48 EEST)" (scheduled at 2026-05-24 16:48:48.757682+03:00)
+2026-05-24 16:48:48,777 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 16:49:48 EEST)" executed successfully
+2026-05-24 16:48:49,123 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:48:59,166 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:49:06,686 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:49:06,828 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 16:49:06,829 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 16:49:06,829 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 16:49:06,851 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 17:04:28,533 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:04:28,533 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:04:28,534 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:04:28,743 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:04:28,788 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:04:28,849 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 17:04:28,850 INFO apscheduler.scheduler Added job "BotHandlers.run_schedule_tick" to job store "default"
+2026-05-24 17:04:28,851 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 17:04:28,851 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 17:04:28,851 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:04:28,852 INFO bot.application Scheduler started
+2026-05-24 17:04:28,853 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:04:28,853 INFO telegram.ext.Application Application started
+2026-05-24 17:04:28,894 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 17:04:37,821 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:04:38,003 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:04:47,914 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:04:58,037 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:04:58,294 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:04:58,447 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:05:08,380 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:10,081 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:10,311 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:05:17,682 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:27,816 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:28,538 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:06:28 EEST)" (scheduled at 2026-05-24 17:05:28.533058+03:00)
+2026-05-24 17:05:28,545 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:06:28 EEST)" executed successfully
+2026-05-24 17:05:37,872 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:48,009 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:05:58,147 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:08,285 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:18,424 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:18,640 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:18,847 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:06:28,548 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:07:28 EEST)" (scheduled at 2026-05-24 17:06:28.533058+03:00)
+2026-05-24 17:06:28,552 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:07:28 EEST)" executed successfully
+2026-05-24 17:06:28,765 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:38,813 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:48,939 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:06:59,076 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:09,214 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:19,259 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:28,541 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:08:28 EEST)" (scheduled at 2026-05-24 17:07:28.533058+03:00)
+2026-05-24 17:07:28,543 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:08:28 EEST)" executed successfully
+2026-05-24 17:07:29,389 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:39,439 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:49,561 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:51,567 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 17:07:54,696 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:07:54,697 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 17:07:54,698 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 17:07:54,715 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 17:16:18,264 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:16:18,266 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:16:18,267 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:16:18,495 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:16:18,539 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:16:18,593 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 17:16:18,594 INFO apscheduler.scheduler Added job "BotHandlers.run_schedule_tick" to job store "default"
+2026-05-24 17:16:18,595 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 17:16:18,595 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 17:16:18,595 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:16:18,596 INFO bot.application Scheduler started
+2026-05-24 17:16:18,597 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:16:18,598 INFO telegram.ext.Application Application started
+2026-05-24 17:16:18,641 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 17:16:21,314 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:16:21,384 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:16:29,954 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:29 +0300] "GET /style-gallery/-1003733603815 HTTP/1.1" 200 71124 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,272 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /preview/dark_amber HTTP/1.1" 200 58108 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,306 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /preview/dark_arctic HTTP/1.1" 200 57900 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,331 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /preview/dark_azure HTTP/1.1" 200 58022 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,361 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /preview/dark_blood HTTP/1.1" 200 56202 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,385 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /preview/dark_candy HTTP/1.1" 200 58308 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:30,393 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:30 +0300] "GET /favicon.ico HTTP/1.1" 404 174 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:31,465 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:16:35,468 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:35 +0300] "GET /preview/dark_clean HTTP/1.1" 200 50687 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:36,129 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:36 +0300] "GET /preview/dark_copper HTTP/1.1" 200 57885 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:37,711 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:37 +0300] "GET /preview/dark_crimson HTTP/1.1" 200 58056 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,092 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_cyber HTTP/1.1" 200 58164 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,155 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_emerald HTTP/1.1" 200 57796 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,418 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_gold HTTP/1.1" 200 58225 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,466 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_graphite HTTP/1.1" 200 53283 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,765 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_lava HTTP/1.1" 200 58165 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:38,810 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:38 +0300] "GET /preview/dark_marine HTTP/1.1" 200 58153 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:39,133 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:39 +0300] "GET /preview/dark_matrix HTTP/1.1" 200 58030 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:39,205 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:39 +0300] "GET /preview/dark_mint HTTP/1.1" 200 58151 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:39,528 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:39 +0300] "GET /preview/dark_mocha HTTP/1.1" 200 57650 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:39,725 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:39 +0300] "GET /preview/dark_neon HTTP/1.1" 200 57565 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:39,960 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:39 +0300] "GET /preview/dark_obsidian HTTP/1.1" 200 53065 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:40,027 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:40 +0300] "GET /preview/dark_ocean HTTP/1.1" 200 58245 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:41,202 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:41 +0300] "GET /preview/dark_oil HTTP/1.1" 200 57405 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:41,601 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:16:44,255 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:44 +0300] "GET /preview/dark_plasma HTTP/1.1" 200 57706 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:44,343 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:44 +0300] "GET /preview/dark_purple HTTP/1.1" 200 58192 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:44,418 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:44 +0300] "GET /preview/dark_royal HTTP/1.1" 200 58232 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:44,727 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:44 +0300] "GET /preview/dark_rust HTTP/1.1" 200 57981 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:44,774 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:44 +0300] "GET /preview/dark_shadow HTTP/1.1" 200 52750 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:45,060 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:45 +0300] "GET /preview/dark_steel HTTP/1.1" 200 57898 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:45,127 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:45 +0300] "GET /preview/dark_tv HTTP/1.1" 200 51892 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:45,424 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:45 +0300] "GET /preview/light_blueprint HTTP/1.1" 200 37229 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:47,108 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_classic HTTP/1.1" 200 36643 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:47,407 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_coral HTTP/1.1" 200 37460 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:47,481 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_lavender HTTP/1.1" 200 37252 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:47,720 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_minimal HTTP/1.1" 200 37179 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:47,793 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_mint HTTP/1.1" 200 37199 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:48,012 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:47 +0300] "GET /preview/light_paper HTTP/1.1" 200 36996 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:48,093 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:48 +0300] "GET /preview/light_pastel HTTP/1.1" 200 36985 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:49,875 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:49 +0300] "GET /preview/light_rose HTTP/1.1" 200 37274 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:50,021 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:50 +0300] "GET /preview/light_sand HTTP/1.1" 200 37144 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:51,686 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:16:51,757 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:51 +0300] "GET /preview/light_sky HTTP/1.1" 200 37064 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:51,808 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:51 +0300] "GET /preview/light_slate HTTP/1.1" 200 37059 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:52,065 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:52 +0300] "GET /preview/light_spring HTTP/1.1" 200 37371 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:52,120 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:16:52 +0300] "GET /preview/light_terminal HTTP/1.1" 200 37093 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:16:59,933 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 17:17:00,072 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:17:00,073 INFO telegram.ext.Application Application is stopping. This might take a moment.
+2026-05-24 17:17:00,074 INFO apscheduler.scheduler Scheduler has been shut down
+2026-05-24 17:17:00,096 INFO telegram.ext.Application Application.stop() complete
+2026-05-24 17:19:41,801 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:19:41,802 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:19:41,802 INFO apscheduler.scheduler Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-24 17:19:41,986 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:19:42,036 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getMe "HTTP/1.1 200 OK"
+2026-05-24 17:19:42,087 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/setMyCommands "HTTP/1.1 200 OK"
+2026-05-24 17:19:42,088 INFO apscheduler.scheduler Added job "BotHandlers.run_schedule_tick" to job store "default"
+2026-05-24 17:19:42,088 INFO apscheduler.scheduler Added job "BotHandlers.generate_news_for_active_channels" to job store "default"
+2026-05-24 17:19:42,089 INFO apscheduler.scheduler Added job "BotHandlers.generate_signal_for_active_channels" to job store "default"
+2026-05-24 17:19:42,089 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:19:42,089 INFO bot.application Scheduler started
+2026-05-24 17:19:42,090 INFO apscheduler.scheduler Scheduler started
+2026-05-24 17:19:42,091 INFO telegram.ext.Application Application started
+2026-05-24 17:19:42,132 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-24 17:19:43,173 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:19:43,248 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:19:45,842 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:45 +0300] "GET /style-gallery/-1003733603815 HTTP/1.1" 200 71124 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,122 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /preview/dark_amber HTTP/1.1" 200 54324 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,138 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /preview/dark_arctic HTTP/1.1" 200 54123 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,154 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /preview/dark_blood HTTP/1.1" 200 52569 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,173 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /preview/dark_azure HTTP/1.1" 200 54208 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,198 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /preview/dark_candy HTTP/1.1" 200 54284 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:46,203 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:46 +0300] "GET /favicon.ico HTTP/1.1" 404 174 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:47,398 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:47 +0300] "GET /preview/dark_clean HTTP/1.1" 200 48950 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:48,993 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:48 +0300] "GET /preview/dark_copper HTTP/1.1" 200 53879 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:49,065 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:49 +0300] "GET /preview/dark_crimson HTTP/1.1" 200 54047 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:51,430 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:51 +0300] "GET /preview/dark_cyber HTTP/1.1" 200 54441 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:51,563 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:51 +0300] "GET /preview/dark_emerald HTTP/1.1" 200 54077 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:52,334 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:52 +0300] "GET /preview/dark_gold HTTP/1.1" 200 54472 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:52,856 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:52 +0300] "GET /preview/dark_graphite HTTP/1.1" 200 49573 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:52,927 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:52 +0300] "GET /preview/dark_lava HTTP/1.1" 200 53868 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:53,257 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:19:53,646 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:53 +0300] "GET /preview/dark_marine HTTP/1.1" 200 54095 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:53,751 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:53 +0300] "GET /preview/dark_matrix HTTP/1.1" 200 54325 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:54,467 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:54 +0300] "GET /preview/dark_mint HTTP/1.1" 200 54087 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:55,527 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:55 +0300] "GET /preview/dark_mocha HTTP/1.1" 200 53884 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:55,616 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:55 +0300] "GET /preview/dark_neon HTTP/1.1" 200 54083 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:55,687 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:55 +0300] "GET /preview/dark_obsidian HTTP/1.1" 200 49470 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:55,998 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:55 +0300] "GET /preview/dark_ocean HTTP/1.1" 200 54183 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,048 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_oil HTTP/1.1" 200 53068 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,319 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_plasma HTTP/1.1" 200 54421 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,367 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_purple HTTP/1.1" 200 54198 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,658 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_royal HTTP/1.1" 200 54165 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,689 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_rust HTTP/1.1" 200 53929 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:56,957 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_shadow HTTP/1.1" 200 48699 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,001 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:56 +0300] "GET /preview/dark_steel HTTP/1.1" 200 54332 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,234 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/dark_tv HTTP/1.1" 200 49275 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,284 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/light_blueprint HTTP/1.1" 200 37915 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,540 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/light_classic HTTP/1.1" 200 37707 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,580 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/light_coral HTTP/1.1" 200 38059 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,863 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/light_lavender HTTP/1.1" 200 37794 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:57,916 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:57 +0300] "GET /preview/light_minimal HTTP/1.1" 200 37709 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:58,149 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:58 +0300] "GET /preview/light_mint HTTP/1.1" 200 38069 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:58,200 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:58 +0300] "GET /preview/light_paper HTTP/1.1" 200 37779 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:19:58,236 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:19:58 +0300] "GET /preview/light_pastel HTTP/1.1" 200 37760 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:03,392 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:08,497 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "POST /apply-style HTTP/1.1" 302 207 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,608 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /style-gallery/-1003733603815 HTTP/1.1" 200 71128 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,782 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /preview/dark_amber HTTP/1.1" 200 54324 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,784 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /preview/dark_arctic HTTP/1.1" 200 54123 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,834 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /preview/dark_blood HTTP/1.1" 200 52569 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,840 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /preview/dark_azure HTTP/1.1" 200 54208 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:08,845 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:08 +0300] "GET /preview/dark_candy HTTP/1.1" 200 54284 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:13,464 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:18,899 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:18 +0300] "POST /apply-zoom HTTP/1.1" 302 207 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,002 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:18 +0300] "GET /style-gallery/-1003733603815 HTTP/1.1" 200 71128 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,162 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:19 +0300] "GET /preview/dark_amber HTTP/1.1" 200 54324 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,163 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:19 +0300] "GET /preview/dark_arctic HTTP/1.1" 200 54123 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,212 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:19 +0300] "GET /preview/dark_blood HTTP/1.1" 200 52569 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,215 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:19 +0300] "GET /preview/dark_azure HTTP/1.1" 200 54208 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:19,218 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:19 +0300] "GET /preview/dark_candy HTTP/1.1" 200 54284 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:20,345 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:20 +0300] "GET /preview/dark_clean HTTP/1.1" 200 48950 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:20,425 INFO aiohttp.access 127.0.0.1 [24/May/2026:17:20:20 +0300] "GET /preview/dark_copper HTTP/1.1" 200 53879 "https://defensive-fetch-cod.ngrok-free.dev/style-gallery/-1003733603815" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0"
+2026-05-24 17:20:23,508 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:29,325 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:29,483 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:20:33,528 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:33,597 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:20:41,803 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:21:41 EEST)" (scheduled at 2026-05-24 17:20:41.801404+03:00)
+2026-05-24 17:20:41,810 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:21:41 EEST)" executed successfully
+2026-05-24 17:20:43,628 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:51,613 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:20:51,756 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:21:01,750 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:11,792 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:21,832 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:31,952 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:34,020 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:34,205 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:21:41,802 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:22:41 EEST)" (scheduled at 2026-05-24 17:21:41.801404+03:00)
+2026-05-24 17:21:41,804 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:22:41 EEST)" executed successfully
+2026-05-24 17:21:44,076 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:44,190 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:21:44,405 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:21:54,270 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:02,847 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:02,989 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-24 17:22:03,016 ERROR bot.handlers Unhandled bot error
+Traceback (most recent call last):
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "C:\Users\magic\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\handlers.py", line 778, in handle_callback
+    self.approval_manager.delete_pending(draft_id, release_signal_slot=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\magic\OneDrive\Рабочий стол\superbot\bot\approval_manager.py", line 72, in delete_pending
+    self.ledger_repository.release(channel_id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SignalLedgerRepository' object has no attribute 'release'
+2026-05-24 17:22:03,095 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/sendMessage "HTTP/1.1 200 OK"
+2026-05-24 17:22:12,906 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:22,953 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:33,072 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:41,813 INFO apscheduler.executors.default Running job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:23:41 EEST)" (scheduled at 2026-05-24 17:22:41.801404+03:00)
+2026-05-24 17:22:41,814 INFO apscheduler.executors.default Job "BotHandlers.run_schedule_tick (trigger: interval[0:01:00], next run at: 2026-05-24 17:23:41 EEST)" executed successfully
+2026-05-24 17:22:43,209 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"
+2026-05-24 17:22:53,250 INFO httpx HTTP Request: POST https://api.telegram.org/bot8628909341:AAGekFXSHkOodd4eYlqCo-x6vDgh0QvpOMI/getUpdates "HTTP/1.1 200 OK"

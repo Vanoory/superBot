@@ -1,0 +1,34 @@
+{
+  "-1003733603815": {
+    "signal_mode": "smc",
+    "morning_chart": "btc_chart",
+    "morning_custom_symbol": "",
+    "morning_post_variant": "brief",
+    "morning_post_time": "09:00",
+    "morning_chart_interval": "4h",
+    "filler_post_times": [
+      "14:00",
+      "20:00"
+    ],
+    "post_formatting": "with_bold",
+    "language": "ru",
+    "active": true,
+    "intervals_to_scan": [
+      "4h",
+      "1d"
+    ],
+    "symbols_whitelist": [],
+    "max_signals_per_day": 3,
+    "writing_style_notes": "",
+    "style_reference_limit": 4,
+    "chart_style_signal_preset": "dark_tv",
+    "chart_style_smc_preset": "dark_amber",
+    "chart_style_morning_preset": "dark_tv",
+    "chart_zoom_signal": "standard",
+    "chart_zoom_smc": "standard",
+    "chart_zoom_morning": "standard",
+    "chart_style_overrides": {},
+    "use_channel_backgrounds": true,
+    "channel_name": "NEXUS Торгует"
+  }
+}
